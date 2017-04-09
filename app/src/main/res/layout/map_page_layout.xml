@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map_page_container"
+    android:orientation="vertical"
+    android:paddingTop="35dp"
+    android:fitsSystemWindows="true">
+
+    <Button
+        android:id="@+id/btn_load_route"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Load Route"
+        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@+id/editText_destination_location"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:id="@+id/editText_source_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Current Location"
+        android:inputType="textPersonName"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/btn_load_route"
+        android:layout_toStartOf="@+id/btn_load_route" />
+
+    <EditText
+        android:id="@+id/editText_destination_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Destination Location"
+        android:inputType="textPersonName"
+        android:layout_below="@+id/editText_source_location"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/btn_load_route"
+        android:layout_toStartOf="@+id/btn_load_route" />
+
+    <fragment
+        android:id="@+id/map_fragment"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="414dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btn_load_route" />
+
+</RelativeLayout>
